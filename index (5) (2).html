@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#152b25"><title>EduCity | رحلة إنقاذ مدينة التعليم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style (5) (2).css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar"><a class="brand" href="#" aria-label="EduCity"><span class="brand-icon">✦</span> EduCity <small>مدينة المعرفة</small></a>
+    <div class="top-stats"><span>⭐ <b id="totalPoints">0</b> نقطة</span><span>🔑 <b id="keyCount">0</b>/8</span></div>
+  </header>
+  <main>
+    <section id="welcomeScreen" class="screen welcome-screen">
+      <div class="welcome-copy"><span class="eyebrow">THE CITY NEEDS A HERO</span><h1>النور اختفى…<br><span>والمدينة بتناديك!</span></h1>
+        <p>في مدينة التعليم انطفأت أنوار المعرفة. مهمتك استكشاف المباني الثمانية، اجتياز تحدياتها، وجمع مفاتيح النور لإعادة الحياة إلى المدينة.</p>
+        <div class="story-chips"><span>🗺️ 8 مناطق للاستكشاف</span><span>🧩 119 سؤالًا</span><span>🏆 بوابة نهائية</span></div>
+        <label for="studentName">اسم قائد المهمة</label><input id="studentName" maxlength="24" placeholder="اكتب اسمك هنا" autocomplete="name">
+        <button class="primary-btn" id="startBtn">ابدأ مهمة الإنقاذ <span>←</span></button>
+        <p class="save-hint">💾 تقدمك بيتحفظ تلقائيًا على نفس الجهاز.</p>
+      </div>
+      <div class="welcome-art"><div class="welcome-moon">☾</div><div class="welcome-stars">✦　·　✧　　✦</div><div class="castle">🏰</div><div class="welcome-city"><span>🏫</span><span>🏛️</span><span>🏢</span><span>🏥</span></div><div class="light-beam"></div><div class="art-caption">كل إجابة صحيحة… بتعيد النور للمدينة</div></div>
+    </section>
+
+    <section id="cityScreen" class="screen hidden">
+      <div class="section-heading"><div><span class="eyebrow">WELCOME BACK, HERO</span><h2>خريطة مدينة التعليم</h2><p id="helloStudent">أهلًا بك في مهمة الإنقاذ!</p></div>
+        <div class="progress-card"><span>مستوى إنقاذ المدينة</span><strong id="cityProgress">0%</strong><div class="progress-track"><i id="cityProgressBar"></i></div></div>
+      </div>
+      <div class="mission-strip"><div class="mission-symbol">🧭</div><div><b>مهمتك الحالية</b><p id="missionText">ابدأ من مبنى أساسيات التدريس، واجمع أول مفتاح نور.</p></div><span class="mission-count" id="missionCount">0 / 8</span></div>
+      <div class="city-scene" id="cityScene"><div class="city-sky"><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span><span class="cloud cloud-a">☁</span><span class="cloud cloud-b">☁</span></div>
+        <div class="city-river"></div><div class="road road-one"></div><div class="road road-two"></div><div class="road road-three"></div>
+        <div class="city-landmark landmark-one">🌳</div><div class="city-landmark landmark-two">🌲</div><div class="city-landmark landmark-three">⛲</div>
+        <div id="buildingGrid" class="building-grid"></div><div class="city-ground"></div>
+        <div class="gate-locked" id="gateLocked"><span>🚪</span><b>بوابة النور</b><small>اجمع المفاتيح الثمانية لفتحها</small><div class="gate-lock">🔒</div></div>
+        <button class="gate-open hidden" id="openGateBtn"><span>✨</span><b>بوابة النور</b><small>كل المفاتيح اكتملت — افتح البوابة!</small></button>
+      </div>
+      <div class="city-legend"><span>🌑 لم تبدأ بعد</span><span>🔓 متاح للاستكشاف</span><span>✨ اكتمل وأضاء</span><span>🔒 مغلق مؤقتًا</span></div>
+      <div class="city-bottom-grid"><div class="keys-panel"><div><h3>مفاتيح المعرفة</h3><p>كل مبنى مكتمل يمنحك مفتاحًا مضيئًا.</p></div><div id="keysTray" class="keys-tray"></div></div>
+        <aside class="guide-card"><div class="guide-avatar">🦉</div><div><b>مرشد المدينة «حكيم»</b><p id="guideMessage">أهلًا يا بطل! جاوب صح عشان تجمع مفاتيح النور. ولو أخطأت، تقدر تحاول تاني.</p></div></aside></div>
+    </section>
+
+    <section id="buildingScreen" class="screen hidden">
+      <button class="back-btn" id="backToCity">← العودة إلى المدينة</button>
+      <div class="building-hero"><div class="building-emoji" id="buildingEmoji">🏛️</div><div class="building-hero-copy"><span class="eyebrow">KNOWLEDGE ZONE</span><h2 id="buildingTitle"></h2><p id="buildingSubtitle"></p><div class="building-progress-wrap"><span id="buildingProgressLabel">إنجاز المبنى: 0%</span><div class="progress-track"><i id="buildingProgressBar"></i></div></div></div><div class="building-badge" id="buildingBadge">منطقة معرفة</div></div>
+      <div class="guide-tip"><span>🦉</span><p id="buildingGuide">مرحبًا بك! اقرأ ملخص المنطقة أولًا، وبعدها ابدأ التحدي.</p></div>
+      <div class="tabs"><button class="tab active" data-tab="summary">📚 غرفة المعرفة</button><button class="tab" data-tab="challenge">⚔️ غرفة التحدي</button></div>
+      <article id="summaryPanel" class="content-panel"><h3>📚 اكتشف أسرار هذا المبنى</h3><div id="summaryContent" class="summary-content"></div><p class="source-note">ملخص تعليمي مستند إلى موضوعات كتاب المقرر.</p><button class="primary-btn" id="goChallenge">أنا مستعد للتحدي ←</button></article>
+      <article id="challengePanel" class="content-panel hidden"><div class="challenge-top"><div><span class="eyebrow">KNOWLEDGE QUEST</span><h3>تحدي المعرفة</h3></div><div class="hearts" id="hearts">❤️ ❤️ ❤️</div></div>
+        <div class="question-progress"><span id="questionCounter">السؤال 1 من 5</span><span id="roundScore">0 نقطة</span></div><div class="progress-track quest-track"><i id="roundProgress"></i></div><div id="questionArea"></div><div id="feedback" class="feedback hidden"></div><button class="primary-btn hidden" id="nextQuestion">التالي ←</button></article>
+    </section>
+
+    <section id="finalScreen" class="screen final-screen hidden"><div class="portal"><span>✦</span></div><span class="eyebrow">THE LAST CHALLENGE</span><h2>بوابة النور الذهبية</h2><p>جمعت مفاتيح المعرفة الثمانية! بقي الاختبار الأخير لتعود الإضاءة إلى كل المدينة.</p><div class="final-guide">🦉 حكيم: ركّز في كل سؤال… دي آخر خطوة في مهمتك!</div><div id="finalQuestionArea" class="content-panel"></div><div id="finalFeedback" class="feedback hidden"></div><button class="primary-btn hidden" id="nextFinal">التالي ←</button></section>
+    <section id="victoryScreen" class="screen victory-screen hidden"><div class="victory-icon">🏆</div><span class="eyebrow">CITY RESTORED</span><h2>أنت بطل مدينة التعليم!</h2><p id="victoryMessage">عادت الأنوار بفضلك!</p><div class="victory-stats"><div><strong id="finalPoints">0</strong><span>النقاط</span></div><div><strong>8/8</strong><span>المفاتيح</span></div><div><strong id="finalCorrectStat">0/10</strong><span>الاختبار النهائي</span></div></div><div class="victory-ribbon">🌟 المدينة أضاءت من جديد بفضل شجاعتك ومعرفتك 🌟</div><button class="primary-btn" id="restartBtn">العودة للبداية ↻</button></section>
+  </main>
+  <footer>EduCity <span>•</span> اتعلم، اتحدى نفسك، وأنقذ المدينة</footer>
+  <script src="questions.js"></script><script src="app.js"></script>
+</body></html>
